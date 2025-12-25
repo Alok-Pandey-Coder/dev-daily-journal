@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1); /* 10% white transparency */
+    backdrop-filter: blur(10px);          /* The "Frost" effect */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px); /* Moves up slightly */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); /* Shadow gets bigger/softer */
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    background-color: #b5a3a3;
+    border: none;
+    border-radius: 5px;
+    color: #232121;
+    outline: none;
+}
+
+button {
+    width: 25%;
+    padding: 10px;
+    background-color: #6200EA;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:active {
+    transform: scale(0.95); /* Shrink to 95% size when clicked */
+}
+
+button:hover {
+    background-color: #3700B3;
+}
+
+#weather-info {
+    margin-top: 20px;
+
+}
+
+#city-name {
+    padding: 10px;
+}
+
+#temperature {
+   margin: 5px;
+}
+/* #description {
+    padding: 7px;
+} */
+
+.hidden {
+    display: none;
+}
+
+#error-message {
+    color: #FF5722;
+    margin-top: 20px;
+}
+
+#weather-icon {
+    background-color: #dbcdcd;
+}
+
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#weather-info {
+   
+    animation: slideUp 0.6s ease-out;
+}
